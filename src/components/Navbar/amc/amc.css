@@ -1,0 +1,155 @@
+.plan-section{
+    padding: 50px 40px;
+    background: rgb(242, 246, 253);
+    
+}
+.plan-section h2{
+    text-align: center;
+}
+
+.plan-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plan-container-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    justify-content: center;
+    gap: 24px;
+    margin-top: 25px;
+}
+
+.plan-container-card{
+    width: 350px;
+    background: #ffffff;
+    border: 1px solid #b6d6ff;
+    border-radius: 18px;
+    padding: 24px;
+    transition: 0.3s ease;
+}
+
+.plan-container-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(47,107,255,0.12);
+}
+
+.plan-header{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    margin-bottom: 18px;
+}
+
+.plan-img{
+    width: 55px;
+    height: 55px;
+
+    background: #f4f7ff;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.plan-img img{
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+.plan-right-content{
+    flex: 1;
+}
+.plan-right-content h3{
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: #2365ff;
+}
+
+.plan-right-content p{
+    font-size: 14px;
+    line-height: 1.5;
+    color: #64748b;
+    max-width: 25ch;
+}
+.plan-divider{
+    height: 1px;
+    background: #e5ebff;
+    margin-bottom: 18px;
+}
+
+.plan-check{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.plan-check img{
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.plan-check p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 15px;
+    color: #334155;
+}
+@media (max-width: 1023px){
+
+    .plan-section{
+        padding: 70px 24px;
+    }
+
+    .plan-container-grid{
+        grid-template-columns: repeat(2, minmax(280px, 340px));
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .plan-container-card{
+        width: 100%;
+    }
+
+}
+@media (max-width: 767px){
+
+    .plan-section{
+        padding: 60px 18px;
+    }
+
+    .plan-container-grid{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .plan-container-card{
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .plan-header{
+        gap: 12px;
+    }
+
+    .plan-right-content h3{
+        font-size: 20px;
+    }
+
+    .plan-right-content p{
+        font-size: 14px;
+    }
+
+    .plan-check p{
+        font-size: 14px;
+    }
+
+}

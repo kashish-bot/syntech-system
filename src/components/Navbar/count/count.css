@@ -1,0 +1,156 @@
+.count-section{
+    padding: 0px 40px;
+    background: #ffffff;
+}
+
+.count-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.count-container-grid{
+    background: linear-gradient(180deg,#003ab8,#4d8bff);
+
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+    overflow: hidden;
+}
+
+.count-card{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 22px 24px;
+
+    position: relative;
+}
+
+.count-card:not(:last-child)::after{
+    content: "";
+    position: absolute;
+
+    right: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 1px;
+    height: 55px;
+
+    background: rgba(255,255,255,0.25);
+}
+
+.count_img{
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.count_img img{
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+.count-content{
+    display: flex;
+    flex-direction: column; /* puts p below h3 */
+}
+.count-card h3{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.count-card p{
+    color: rgba(255,255,255,0.9);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .count-section {
+    padding: 30px 24px;
+  }
+
+  .count-container-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .count-card {
+    padding: 22px 20px;
+  }
+
+  .count-card:nth-child(2)::after {
+    display: none;
+  }
+
+  .count-content h3 {
+    font-size: 34px;
+  }
+
+  .count-content p {
+    font-size: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .count-section {
+    padding: 25px 18px;
+  }
+
+  .count-container-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .count-card {
+    position: relative;
+    flex-direction: row;        /* icon left, text right */
+    justify-content:center;
+    text-align: left;
+    padding: 24px 18px;
+  }
+
+  .count-card:not(:last-child){
+    border-bottom: 1px solid rgba(255, 255, 255, 0.493);
+  }
+
+  .count-card::after {
+    display: none !important;
+  }
+
+  .count-content {
+    align-items: flex-start;
+  }
+
+  .count-content h3 {
+    font-size: 32px;
+  }
+
+  .count-content p {
+    font-size: 14px;
+  }
+
+  .count_img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .count_img img {
+    width: 40px;
+    height: 40px;
+  }
+}

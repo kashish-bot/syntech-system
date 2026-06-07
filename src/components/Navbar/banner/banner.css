@@ -1,0 +1,203 @@
+.corporate-banner {
+    padding: 50px 40px;
+    width: 100%;
+    background-color: rgb(242, 246, 253);
+
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    align-items: center;
+    gap: 80px;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+}
+.corporate-banner::before{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image: url("/corporate_banner.jpg");
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.10;
+
+    z-index: -1;
+}
+.left-banner,
+.right-banner{
+    position: relative;
+    z-index: 1;
+}
+.right-banner{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 350px));
+    gap: 15px 18px;
+    justify-content: end;
+}
+.banner-card-container{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 12px;
+    border: 1px solid #b6d6ff;
+    border-radius: 16px;
+    background-color: #ffffff;
+    transition: 0.3s ease;
+}
+.banner-card-container:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(31, 95, 255, 0.1);
+}
+.banner-img{
+    background-color: rgb(235, 242, 255);
+    height: 45px;
+    width: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.banner-img img{
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+}
+.banner-content{
+    flex: 1;
+}
+.banner-content h4{
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+.banner-content p{
+    font-size: 13px;
+    line-height: 1.5;
+    color: #475569;
+}
+.title-tag{
+    padding: 8px 16px 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #2f6bff;
+    /* border-color: blue; */
+    background-color: white;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+.title-tag-content{
+    color: #2f6bff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.left-banner-content h3{
+    font-size: 30px;
+    max-width: 20ch;
+    line-height: 40px;
+}
+.left-banner-content p{
+    font-size: 16px;
+    color: rgb(77, 77, 77);
+    max-width: 50ch;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+.callButton{
+  display:flex;
+  gap:18px;
+  margin-top: 20px;
+}
+.callButton img{
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+.callButton a{
+  padding:15px 24px;
+  border-radius:10px;
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  border:1px solid rgba(255,255,255,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background:#1f6fff;
+  /* background: rgba(255,255,255,0.05); */
+  backdrop-filter: blur(5px);
+}
+
+@media (max-width: 1023px) {
+  .corporate-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 50px 20px;
+    gap: 30px;
+
+    height: auto;
+    min-height: auto;
+  }
+
+  .left-banner {
+    max-width: 100%;
+  }
+
+  .left-banner h3 {
+    font-size: 42px;
+    line-height: 1.2;
+    max-width: 100%;
+  }
+
+  .left-banner > p {
+    max-width: 100%;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .right-banner {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 16px;
+    justify-items: center;
+  }
+
+  .banner-card-container {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .corporate-banner {
+    padding: 45px 18px;
+  }
+
+  .left-banner h3 {
+    font-size: 32px;
+  }
+
+  .left-banner > p {
+    font-size: 18px;
+  }
+
+  .title-tag {
+    font-size: 12px;
+    padding: 7px 14px;
+  }
+
+  .banner-card-container {
+    max-width: 100%;
+  }
+}
