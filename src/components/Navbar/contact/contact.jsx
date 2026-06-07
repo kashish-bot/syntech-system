@@ -13,10 +13,10 @@ const sendEmail = (e) => {
 
   emailjs
     .sendForm(
-      "service_y5vinij",
-      "template_sasaw7n",
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       form.current,
-      "detaMaLcLnMUTV1xw"
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
     .then(() => {
       alert("Request sent successfully!");
